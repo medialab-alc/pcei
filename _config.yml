@@ -1,1 +1,4 @@
-theme: jekyll-theme-cayman
+remote_theme: johno/pixyll
+markdown: kramdown
+permalink: pretty
+paginate: 3
