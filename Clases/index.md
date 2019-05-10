@@ -1,4 +1,4 @@
-[## Clases
+## Clases
 *Lista de clases ordenada. La lista se actualiza a medida que se desarrolla el curso*
 
 
