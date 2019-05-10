@@ -61,3 +61,4 @@ Resultado:
 ### Ejercicio:
 > En papel cuadriculado dibujar o diseñar una composición utilizando solo formas primitivas, estas son: rectángulos, elipses, lineas, puntos y triángulos.
 > En una segunda hoja, escribir el pseudo-código para esa composición, tratando de descubrir los parámetros para todas las formas primitivas.
+
