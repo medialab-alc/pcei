@@ -56,7 +56,7 @@ line(30, 100, 110, 120);
 ```
 Resultado:
 
-![](https://github.com/0000marcosg/CVyP/blob/master/assets/import.png)
+![](https://raw.githubusercontent.com/0000marcosg/CVyP/master/assets/import.png)
 
 ### Ejercicio:
 > En papel cuadriculado dibujar o diseñar una composición utilizando solo formas primitivas, estas son: rectángulos, elipses, lineas, puntos y triángulos.
