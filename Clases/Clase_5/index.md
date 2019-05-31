@@ -1,7 +1,9 @@
 # Repetición, Iteracion.
 
-Las estructuras repetitivas son encargas de producir iteraciones. Es decir, a través de pocas líneas de código se puede repetir, prácticamente, infinitas veces una misma línea de código. Esto ayuda a un mejor rendimiento del programa, pero especialmente a un mejor rendimiento del programador, que con simples estructuras puede reducir notablemente el tiempo y, por ende, errores. Se utiliza una estructura denominada estructura `FOR` , la cual es encargada de repetir un ciclo las veces que queramos. En el siguiente ejemplo se muestra el original código, compuesto de unas 14 líneas, y la versión con el ciclo `FOR` compuesto tan solo de 4:
+Las estructuras repetitivas son encargadas de producir iteraciones. Es decir, a través de pocas líneas de código se puede repetir, prácticamente, infinitas veces una misma línea de código. Esto ayuda a un mejor rendimiento del programa, pero especialmente a un mejor rendimiento del programador, que con simples estructuras puede reducir notablemente el tiempo y, por ende, errores. 
+Dentro de las posibilidades que tenemos al momento de usar una estructura de repeticion, nos encontramos con que podemos usar la estructura `while` o la estructura `for`.
 
+Teniendo este codigo que produce una serie de lineas verticales:  
 ```Processing
 //Programa Original
 
@@ -20,7 +22,18 @@ line(120, 20, 120, 180);
 line(130, 20, 130, 180);
 line(140, 20, 140, 180);
 ```
+Se podria simplificar de la siguiente manera en un loop `while`:
 
+```Processing
+size(200, 200);
+int x = 0;
+while(x < 150) {
+    line(x, 20, x, 180;
+    x = x + 10;
+}
+```
+
+Y de la siguiente manera utilizando un ciclo `for`
 ```Processing
 //Codigo utilizando un FOR
 
@@ -29,10 +42,18 @@ for (int i = 20; i < 150; i += 10) {
     line(i, 20, i, 180);
 }
 ```
+---
+La estructura `while` ejecuta el codigo en su interior mientras la expression en sus parentesis sea verdadera. Su sintaxis es casi identica a la del bloque `if` pero la diferencia fundamental es que el bloque `if` si su condicion es verdadera ejecutara el codigo en su interior solo una vez; mientras que la estructura `while` lo ejecutara de manera indefinida hasta que su condicion deje de ser verdadera.  
+Es un bucle que puede ser peligroso si no nos aseguramos de que el bucle tenga una salida y la condicion deje de ser verdadera, puede colgar nuestro programa, e incluso Processing.
 
+```	
+while (condición) {
+  acciones;
+}
+```
 ---
 
-La estructura FOR perfecciona las repeticiones, pudiendo simplificarse su código básico en esta simple y funcional estructura:
+La estructura `for` perfecciona las repeticiones, pudiendo simplificarse su código básico en esta simple y funcional estructura:
 
 ```
 for(iniciador, condición, actualización){
