@@ -9,3 +9,4 @@
 [__Clase 5__](Clase_5/index.md)  
 [__Clase 6__](Clase_6/index.md)  
 [__Clase 7__](Clase_7/index.md)  
+[__Clase 8__](Clase_8/index.md)  
