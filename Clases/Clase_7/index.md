@@ -79,7 +79,7 @@ El diagrama circular adquiere más bien un concepto de encapsulación, la idea d
 objeto no deberían ser accedidos desde afuera. Los métodos de un objeto actúan como un buffer entre el
 código fuera de la clase y los datos contenidos.
 
-# IMAGEN
+![Diagrama Circular](objetos_diagrama.jpg)
 
 Los campos y métodos de un objetos son accesibles a través del operador punto, un período. Para obtener el
 calor de color del objeto fuji, la sintaxis correspondiente será fuji.color. Para ejecutar el método
@@ -325,3 +325,4 @@ void draw() {
 //Insertar clase Punto
 ```
 
+> Fuente: Processing: un lenguaje al alcance de todos. 2013
