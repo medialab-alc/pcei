@@ -7,4 +7,5 @@
 [__Clase 3__](Clase_3/index.md)  
 [__Clase 4__](Clase_4/index.md)  
 [__Clase 5__](Clase_5/index.md)  
-[__Clase 6__](Clase_6/index.md)
+[__Clase 6__](Clase_6/index.md)  
+[__Clase 7__](Clase_7/index.md)  
