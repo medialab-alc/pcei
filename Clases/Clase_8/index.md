@@ -68,6 +68,6 @@ int[] arrayDeEnteros = { 1, 5, 8, 9, 4, 5 };
 float[] arrayDeFloat = { 1.2, 3.5, 2.0, 3.4123, 9.9 };
 ```
 
-> ### Ejemplo de Clase: [Burbujas](EjemploBurbuja.zip)
+> ### Ejemplo de Clase: [Burbujas](https://github.com/medialab-alc/pcei/raw/master/Clases/Clase_8/EjemploBurbuja.zip)
 
 ---
