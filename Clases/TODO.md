@@ -4,5 +4,6 @@
 - [ ] Agregar ejemplo del gato a clase 9
 - [ ] Agregar clase 10: OpenCV for Processing, instalacion y ejemlpos simples.
 - [ ] Agregar info sobre kinect en clase 10
-- [ ] Agregar intro a Arduino en clase 11. Voltaje, resistencia y amperaje. Led.
+- [ ] Agregar Clase 11: Introduccion a Arduino: Voltaje, resistencia y amperaje. Led.
 - [ ] Agregar clase 12: protoboard, entrada digital, PWM
+- [ ] Agregar clase 13: Entrada Analogica, LDR, Conexion con Processing. PAsync
