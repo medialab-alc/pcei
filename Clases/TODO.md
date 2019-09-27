@@ -7,3 +7,5 @@
 - [ ] Agregar Clase 11: Introduccion a Arduino: Voltaje, resistencia y amperaje. Led.
 - [ ] Agregar clase 12: protoboard, entrada digital, PWM
 - [ ] Agregar clase 13: Entrada Analogica, LDR, Conexion con Processing. PAsync
+- [ ] Agregar clase 14: MiniProyecto
+- [ ] Agregar clase 15: Sensores, acutadores, shields, tipos de arduino. Intro to p5.js
