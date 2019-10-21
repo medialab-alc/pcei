@@ -107,7 +107,7 @@ mostrar una imagen mientras se modifican los píxeles en otra imagen.
 PImage arch;
 void setup() {
   size(100, 100);
-  arch = loadImage("puerto.jpg");
+  arch = loadImage("landscape.jpg");
 }
 void draw() {
   background(204);
@@ -125,45 +125,56 @@ Al implementar el array pixels[], en lugar de la función image() para mostrar u
 este array provee de más control de la mencionada imagen. Simples operaciones matemáticas o pequeños
 cálculos, sumado a un ciclo FOR, revela el verdadero potencial de pixels[] como array.
 ```Processing
-PImage arch = loadImage("puerto.jpg");
-int count = arch.width * arch.height;
-arch.loadPixels();
+PImage flor = loadImage("flor.jpg");
+size(256, 256);
+int count = flor.width * flor.height;
+flor.loadPixels();
 loadPixels();
 for (int i = 0; i < count; i += 2) {
-  pixels[i] = arch.pixels[i];
+  pixels[i] = flor.pixels[i];
 }
 updatePixels();
 ```
+![](imagen1.PNG)
 ```Processing
-PImage arch = loadImage("puerto.jpg");
-int count = arch.width * arch.height;
-arch.loadPixels();
+PImage flor = loadImage("flor.jpg");
+size(256, 256);
+int count = flor.width * flor.height;
+flor.loadPixels();
 loadPixels();
 for (int i = 0; i < count; i += 3) {
-  pixels[i] = arch.pixels[i];
+  pixels[i] = flor.pixels[i];
 }
 updatePixels();
 ```
+![](imagen2.PNG)
+
 ```Processing
-PImage arch = loadImage("puerto.jpg");
-int count = arch.width * arch.height;
-arch.loadPixels();
+PImage flor = loadImage("flor.jpg");
+size(256, 256);
+int count = flor.width * flor.height;
+flor.loadPixels();
 loadPixels();
 for (int i = 0; i < count; i++) {
-  pixels[i] = arch.pixels[count - i - 1];
+  pixels[i] = flor.pixels[count - i - 1];
 }
 updatePixels();
 ```
+![](imagen3.PNG)
+
 ```Processing
-PImage arch = loadImage("puerto.jpg");
-int count = arch.width * arch.height;
-arch.loadPixels();
+PImage flor = loadImage("flor.jpg");
+size(256, 256);
+int count = flor.width * flor.height;
+flor.loadPixels();
 loadPixels();
   for (int i = 0; i < count; i++) {
-pixels[i] = arch.pixels[i/2];
+pixels[i] = flor.pixels[i/2];
 }
 updatePixels();
 ```
+![](imagen4.PNG)
+
 
 ### Componentes del Píxel
 Las funciones red(), green() y blue() son utilizadas para leer valores individuales de los píxeles. Estos
