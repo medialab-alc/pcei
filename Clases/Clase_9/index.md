@@ -194,6 +194,7 @@ for (int i = 0; i < width*height; i++) {
 }
 updatePixels();
 ```
+![](imagen5.PNG)
 
 Los valores del teclado y el mouse pueden ser utilizados en la manera en la que el array pixels[] modifica
 mientras el programa se está ejecutando. En el siguiente ejemplo, una imagen es convertida a escala de
@@ -221,6 +222,7 @@ void draw() {
   line(mouseX, 0, mouseX, height);
 }
 ```
+![](pixels5.gif)
 Estas funciones de modificación individual son muy útiles, pero también muy lentas. Cuando se requiere que
 se modifique de forma individual cientos o miles de veces mientras se ejecuta el programa, se recomienda
 utilizar una técnica conocida como bit-shifting.
