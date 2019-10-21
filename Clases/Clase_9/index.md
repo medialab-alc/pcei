@@ -1,5 +1,4 @@
 # pixels[]
-> TODO - Faltan las imagenes para los ejemplos.
 
 El procesamiento de imágenes es un término muy amplio y general para referirse a la manipulación y
 modificación de las mismas, o en su defecto, producir un resultado estético o mejorar la comunicación.
