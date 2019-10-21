@@ -85,7 +85,7 @@ PImage arch;
 void setup() {
   size(100, 100);
   noStroke();
-  arch = loadImage("arch.jpg");
+  arch = loadImage("landscape.jpg");
 }
 void draw() {
   background(arch);
@@ -98,6 +98,7 @@ void draw() {
   rect(20, 20, 60, 60);
 }
 ```
+![](pixels3.gif)
 
 Cada imagen tiene su propio array pixels[], al cual se puede acceder con el operador punto. Esto hace posible
 mostrar una imagen mientras se modifican los píxeles en otra imagen.
