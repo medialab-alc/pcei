@@ -119,6 +119,8 @@ void draw() {
   image(arch, 50, 0);
 }
 ```
+![](pixels4.gif)
+
 Al implementar el array pixels[], en lugar de la función image() para mostrar una imagen en pantalla,
 este array provee de más control de la mencionada imagen. Simples operaciones matemáticas o pequeños
 cálculos, sumado a un ciclo FOR, revela el verdadero potencial de pixels[] como array.
