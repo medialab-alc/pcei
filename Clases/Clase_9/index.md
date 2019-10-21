@@ -31,6 +31,7 @@ void draw() {
   updatePixels();
 }
 ```
+![](pixels1.gif)
 
 Las funciones loadPixels() y updatePixels() aseguran que el array pixels[] esté listo para ser
 modificado y actualizado. Hay que asegurarse, además, que esté declarado en torno a cualquier bloque, y
