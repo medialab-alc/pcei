@@ -78,6 +78,7 @@ void draw() {
   updatePixels();
 }
 ```
+![](pixels2.gif)
 
 ```Processing
 PImage arch;
