@@ -222,7 +222,8 @@ void draw() {
   line(mouseX, 0, mouseX, height);
 }
 ```
-![](pixels5.gif)
+![](pixels5.gif)  
+
 Estas funciones de modificación individual son muy útiles, pero también muy lentas. Cuando se requiere que
 se modifique de forma individual cientos o miles de veces mientras se ejecuta el programa, se recomienda
 utilizar una técnica conocida como bit-shifting.
