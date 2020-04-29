@@ -8,7 +8,7 @@ El objetivo de este curso es introducir a los estudiantes al campo de la program
 A través del uso creativo de la tecnología se desmitifica el desarrollo de software como una herramienta compleja y se impulsa a los estudiantes a crear dispositivos artísticos desde este campo.
 
 #### Aspectos formales del curso
-El curso consta de una carga presencial de __75 horas__, dando un total de 25 clases presenciales de 3 horas. Con una regularidad de una clase semanal. 
+El curso consta de una carga presencial de __60 horas__, dando un total de 30 clases presenciales de 2 horas. Con una regularidad de una clase semanal. 
 
 La aprobacion del curso requiere un __85%__ de las asistencias, la realizacion de todas las actividades planteadas y el desarrollo de los dos proyectos planeados, uno de caracter intermedio y otro de caracter final.
 
