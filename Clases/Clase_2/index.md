@@ -4,7 +4,14 @@
 > - Pseudo-Código.
 > - Proceso de "Desarrollo en aumento".
 
-
+## Sobre Algoritmos
+````
+-- Algoritmo
+      |---- Sintaxis
+                |---- Javascript
+                           |---- p5.js 
+                
+````
 ## Computación Gráfica, Pixeles y Coordenadas
 El pixel, la unidad gráfica mínima dentro de una imagen, debe ser colocado en su posición a través de coordenadas. Este sistema de coordenadas tiene similitudes y diferencias con el sistema de ejes Cartesianos que estamos mas habituados a ver.
 
@@ -17,7 +24,7 @@ B(6, 5)
 C(4.5, -3.5)
 ````
 
-Por otro lado, el sistema de coordenadas en Processing (y en general otros softwares de producción de imágenes a traves de programacion) se maneja de manera diferente.
+Por otro lado, el sistema de coordenadas en p5.js (y en general otros softwares de producción de imágenes a traves de programacion) se maneja de manera diferente.
 
 ![](https://camo.githubusercontent.com/942802b678afdf29a5802c52e591abeabf9ef07a/687474703a2f2f7777772e6d79776f6e6465726c616e642e65732f637572736f5f6a732f696d616765732f70726f63657373696e672f656a65732e706e67)
 
@@ -46,12 +53,12 @@ Podemos pensar en la función como un comando y en los argumentos como los pará
 ``Bx - Posision x del punto B``  
 ``By - Posision y del punto B``  
 
-Sin embargo, para que el sistema de coordenadas en processing funcione como queremos, debemos establecer el tamaño de la ventana.
+Sin embargo, para que el sistema de coordenadas de p5.js funcione como queremos, debemos establecer el tamaño de la ventana.
 
-Por defecto, Processing usa un tamaño de 100 pixeles por 100 pixeles. En este caso podemos usar una ventana de 200 por 200 para poder visualizar correctamente la linea.
+Por defecto, p5.js usa un tamaño de 100 pixeles por 100 pixeles. En este caso podemos usar una ventana de 200 por 200 para poder visualizar correctamente la linea.
 
 ```
-size(200, 200);
+createCanvas(200, 200);
 line(30, 100, 110, 120);
 ```
 Resultado:
