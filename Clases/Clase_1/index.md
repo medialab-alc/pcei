@@ -9,7 +9,7 @@
 ### Algoritmos y Arte
 > Un algoritmo es una secuencia no ambigua, finita y ordenada de instrucciones que han de seguirse para resolver un problema.
 
-[Imagen de ejemeplo](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/LampFlowchart-es.svg/1200px-LampFlowchart-es.svg.png)
+[Imagen de ejemplo](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/LampFlowchart-es.svg/1200px-LampFlowchart-es.svg.png)
 
 Características de un algoritmo:
 * Tiene que ser preciso.
