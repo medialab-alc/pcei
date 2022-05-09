@@ -3,5 +3,6 @@
 
 
 [**Clase 1 - Parte 1**](Clase_1/index.md)   
-[**Clase 1 - Parte 2**](Clase_2/index.md)  
+[**Clase 1 - Parte 2**](Clase_2/index.md) 
+[**Clase 2 **](Clase_3/index.md) 
 
