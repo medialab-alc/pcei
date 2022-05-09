@@ -1,6 +1,6 @@
 # Relleno y bordes
 
-En Processing las figuras primitivas como las vistas hasta ahora están compuestas por dos elementos, un elemento de borde `stroke` y un elemento de interior, o relleno `fill`
+En p5.js las figuras primitivas como las vistas hasta ahora están compuestas por dos elementos, un elemento de borde `stroke` y un elemento de interior, o relleno `fill`
 
 ## `stroke();`
 
@@ -10,17 +10,17 @@ Define el color de la linea de borde de una figura.
 
 Define el color de relleno de una figura.
 
-> Debemos tener en cuenta que el orden en el que colocamos estos comandos importa. Deben ir siempre por delante de la función que dibuja la figura a la cual queremos aplicarle estas propiedades, ya que lo que hacen es decirle a Processing como debe preparase para dibujar esa figura.
+> Debemos tener en cuenta que el orden en el que colocamos estos comandos importa. Deben ir siempre por delante de la función que dibuja la figura a la cual queremos aplicarle estas propiedades, ya que lo que hacen es decirle a p5.js como debe preparase para dibujar esa figura.
 
 # Color
 
 ### RGB
 
-El modo por defecto en el que se tratan los colores en Processing es en base a valores numéricos correspondientes a los canales RGB.
+El modo por defecto en el que se tratan los colores en p5.js es en base a valores numéricos correspondientes a los canales RGB.
 
 Estos canales \(Red, Green, Blue\) corresponden a los tres colores primarios de la luz y se combinan para formar el resto.
 
-En Processing, cada canal se representa con un valor numérico entre 0 y 255 y la sintaxis para definirlo, por ejemplo, en la función fill\(\) es la siguiente.
+Cada canal se representa con un valor numérico entre 0 y 255 y la sintaxis para definirlo, por ejemplo, en la función fill\(\) es la siguiente.
 
 ```Processing
 fill(R, G, B);
@@ -44,7 +44,7 @@ Si todos los canales están en el valor 255 obtenemos el color blanco, al igual 
 Ejemplo:
 
 ```Processing
-size(300,300);
+createCanvas(300,300);
 
 stroke(255, 0, 0);
 fill(0, 0, 150);
@@ -60,7 +60,7 @@ Dependiendo de la cantidad de argumentos que le demos a estas dos funciones tend
 ```Processing
 fill(RGB);
 fill(255);
-// Con un parámetro, Processing asume que el resto de los parámetros son iguales. 
+// Con un parámetro, p5.js asume que el resto de los parámetros son iguales. 
 // Es equivalente a fill(255,255,255);
 
 fill(RGB, Alfa);
@@ -80,7 +80,7 @@ fill(0, 120, 255, 200);
 Ejemplo:
 
 ```Processing
-size(300,300);
+createCanvas(300,300);
 
 stroke(255, 0, 0);
 fill(0, 0, 150);
@@ -93,7 +93,7 @@ rect(100, 100, 50, 50);
 
 ![](https://raw.githubusercontent.com/0000marcosg/CVyP/master/assets/3import.png)
 
-> #### Para poder trabajar en otros modos de color ver: [colorMode\(\)](https://processing.org/reference/colorMode_.html)
+> #### Para poder trabajar en otros modos de color ver: [colorMode\(\)](https://p5js.org/reference/#/p5/colorMode)
 
 ### background\(\);
 
@@ -118,7 +118,7 @@ rect(100, 100, 50, 50);
 
 # Flow, Flujo del programa
 
-Hasta el momento, venimos ordenando funciones e instrucciones en Processing para ir dibujando elementos en pantalla, pero realmente aun no estamos programando en el sentido mas amplio del concepto.
+Hasta el momento, venimos ordenando funciones e instrucciones en p5.js para ir dibujando elementos en pantalla, pero realmente aun no estamos programando en el sentido mas amplio del concepto.
 
 Estamos dejando afuera uno de los elementos basicos: el flujo.
 
@@ -129,7 +129,7 @@ Podemos encontrar dentro del software dos tipos de flujo:
 * ##### Basado en Eventos - Por ejemplo, aplicaciones web. Un evento se dispara cuando el usuario hace click, luego otro evento le sigue. Si el usuario no hace nada, el software no hace nada.
 * ##### Basado en Loops - Un videojuego es un ejemplo de Flujo basado en Loop. Los enemigos, personajes, entorno se siguen manifestando y ejecutando en base a sus parámetros en una repetición constante hasta que algo los detenga.
 
-En processing podremos hacer uso de ambos.
+En p5.js podremos hacer uso de ambos.
 
 Con los elementos de flujo entra un concepto conocido como "Bloques de Código".
 
@@ -143,7 +143,7 @@ Con los elementos de flujo entra un concepto conocido como "Bloques de Código".
 }//Cerramos bloque de codigo
 ```
 
-En Processing, cuando entramos en el proceso de crear gráficos de manera dinámica, es decir con bloques de código y animaciones, debemos separar el programa en dos bloques principales.
+Cuando entramos en el proceso de crear gráficos de manera dinámica, es decir con bloques de código y animaciones, debemos separar el programa en dos bloques principales.
 
 ```
 setup{
@@ -163,16 +163,16 @@ El bloque `setup`corresponde a la parte de nuestro programa que no necesitamos q
 
 El bloque `draw`lleva en su interior todos elementos que necesitamos cambien o se modifiquen durante la ejecución del software, es un bloque dinámico. Se repite de manera indefinida, es decir, cuando el programa termina de ejecutar la ultima linea del bloque `draw`, vuelve a la primera del mismo.
 
-Sin embargo, la sintaxis para usar estos bloques en Processing es un poco diferente y debemos definirlo de la siguiente manera:
+Sin embargo, la sintaxis para usar estos bloques en p5.js es un poco diferente y debemos definirlo de la siguiente manera:
 
 ```Processing
-void setup() {
+function setup() {
 
     //Se ejecuta una sola vez.
 
 }
 
-void draw(){
+function draw(){
 
     //Se ejecuta por siempre.
 
@@ -193,31 +193,31 @@ Diríamos:
 ellipse(Posision X del mouse, 150, 40, 40);
 ```
 
-Evidentemente, Processing no conoce esa expresión, pero si conoce una variable integrada que nos da ese valor.
+Evidentemente, p5.js no conoce esa expresión, pero si conoce una variable integrada que nos da ese valor.
 
 ```Processing
 ellipse(mouseX, 150, 40, 40);
 ```
 
-`mouseX`es una variable de sistema, es decir, integrada en el núcleo de Processing y nos entrega la posicion X de nuestro mouse dentro de la ventana.
+`mouseX`es una variable de sistema, es decir, integrada en el núcleo de p5.js y nos entrega la posicion X de nuestro mouse dentro de la ventana.
 
 > La correspondiente al eje Y es la función `mouseY`.
 >
-> Otras variables de sistema son: [pmouseX](https://processing.org/reference/pmouseX.html), [pmouseY](https://processing.org/reference/pmouseY.html), [width](https://processing.org/reference/width.html) y [heigth](https://processing.org/reference/height.html)
+> Otras variables de sistema son: [pmouseX](https://p5js.org/reference/#/p5/pmouseX), [pmouseY](https://p5js.org/reference/#/p5/pmouseY), [width](https://p5js.org/reference/#/p5/width) y [heigth](https://p5js.org/reference/#/p5/height)
 
 ---
 
 # Eventos
 
-Un evento en Processing es un bloque de código que se ejecuta solo una vez, no en el sentido del bloque `setup`, sino en el sentido de que se ejecuta una vez cuando el evento se dispara y espera hasta que sea disparado de nuevo.
+Un evento es un bloque de código que se ejecuta solo una vez, no en el sentido del bloque `setup`, sino en el sentido de que se ejecuta una vez cuando el evento se dispara y espera hasta que sea disparado de nuevo.
 
 ```Processing
-void mousePressed() {
+function mousePressed() {
 
 
 }
 
-void keyPressed() {
+function keyPressed() {
 
 
 }
