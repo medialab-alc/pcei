@@ -6,7 +6,7 @@ En p5.js las figuras primitivas como las vistas hasta ahora están compuestas po
 
 Define el color de la linea de borde de una figura.
 
-## fill`();`
+## `fill();`
 
 Define el color de relleno de una figura.
 
