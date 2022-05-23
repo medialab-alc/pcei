@@ -31,28 +31,15 @@ En programación, las variables son espacios reservados en la memoria que, como 
 > * pais = 'República Dominicana'
 > * pi = 3.14
 
-#### Tipos de datos
-
-Processing puede almacenar y modificar muchos tipos de datos, como números, letras, palabras, imágenes, colores, fuentes y valores booleanos \( true y false \). El hecho de guardar datos implica un mayor o menor uso de la memoria del ordenador donde estemos trabajando. No es lo mismo guardar la palabra “Andalucía” que guardar simplemente la “A”. Cada dato es representado como una serie de bits \(0 y 1\). Por ejemplo, 010000100 puede ser interpretado como una letra. Como seres humanos, no hará falta aprender el lenguaje binario para programar, Processing se presta para que el trabajo nos sea mucho más sencillo. Sin embargo, 01000001 puede ser interpretado como al letra “A” o como el número 65. Por lo tanto, es importante definir que tipo de dato estamos trabajando.
-
-| Nombre | Tamaño | Rango de Valores |
-| :--- | :--- | :--- |
-| boolean | 1 bit | true / false |
-| byte | 8 bits | -128 a 127 |
-| char | 16 bits | 0 a 65535 |
-| int | 32 bits | -2147483648 a 2147483647 |
-| float | 32 bits | -3.40282347E+38 a 3.40282347E+38 |
-| color | 32 bits | 16777216 colores |
-
 ## Variables
 
-Una variable es un contenedor para guardar datos. Las variables permiten que cada datos sea reutilizado muchas veces en un programa. Cada variable tiene dos partes: un nombre y un valor. Si una variable almacena el valor 21 y es llamada edad, el nombre edad puede aparecer muchas veces en el programa. Cuando el programa se ejecute, la palabra edad cambiará por el valor de 21. En adición a este nombre y valor, hay que declarar que tipo de datos soporta esa variable. Una variable debe ser, siempre, declarada antes de ser usada. Una declaración de variable consta del tipo de datos que aceptará esa variable, seguida de un nombre creado por nosotros. En el siguiente ejemplo se declaran varios tipos de variables y se les asigna un valor:
+Una variable es un contenedor para guardar datos. Las variables permiten que cada datos sea reutilizado muchas veces en un programa. Cada variable tiene dos partes: un nombre y un valor. Si una variable almacena el valor 21 y es llamada edad, el nombre edad puede aparecer muchas veces en el programa. Cuando el programa se ejecute, la palabra edad cambiará por el valor de 21. Una variable debe ser, siempre, declarada antes de ser usada. En p5.js no necesitamos (a diferencia de otros lenguajes) definir el tipo de dato que contendrá esa variable. Nos alcanza solo con nombrar la variable, darle un nombre y asignarle un valor.
 
 ```
-int x;         //Declaración de variable x del tipo entero
-float y;       //Declaración de variable y del tipo flotante
+let x;         //Declaración de variable con nombre "x"
+let y;         //Declaración de variable con nombre "y"
+let b;         //Declaración de variable con nombre "b"
 
-boolean b;     //Declaración de variable b del tipo booleana
 
 x = 50;        //Asignar el valor 50 a la variable x
 y = 12.6;      //Asignar el valor 12.6 a la variable y
@@ -62,26 +49,26 @@ b = true;      //Asignar el valor true a la variable b
 Hay una forma mas sintetizada de hacer lo mismo. Podemos, entonces, escribir lo mismo en una sola línea:
 
 ```
-int x = 50;
-float y = 12.6;
-boolean b = true;
+let x = 50;
+let y = 12.6;
+let b = true;
 ```
 
 Más de una variable del mismo tipo pueden ser declaradas en la misma línea y luego asignarse un valor por separado a cada una:
 
 ```
-float x, y, b;
+let x, y, b;
 x = -5.56;
 y = 12.6;
 b = 76.789;
 ```
 
-Cuando una variable es declarada, es importante ver que clase de dato se le va a asignar para elegir correctamente el tipo de dato. Ni el nombre, ni el tipo de dato puede ser cambiado una vez declarado. Si es posible reasignar otro valor:
+Algo a tener en cuenta es que no es posible definir dos veces la misma variable, eso nos marcara un error.
 
 ```
-int x = 69;        //Declara variable x y le asigna el valor de 69
+let x = 69;        //Declara variable x y le asigna el valor de 69
 x = 70;            //Cambiar el valor de x por 70
-int x = 71;        //ERROR – La variable x ya existe
+let x = 71;        //ERROR – La variable x ya existe
 ```
 
 El símbolo de igual \( = \) se utiliza para asignar valores, únicamente. Le asigna el valor que se encuentra en el lado derecho, a la variable del lado izquierdo. Por lo tanto, es importante que lo que se encuentre del lado izquierdo sea una variable:
@@ -90,14 +77,6 @@ El símbolo de igual \( = \) se utiliza para asignar valores, únicamente. Le as
 5 = 25;         //ERROR – Lo que se encuentre del lado izquierdo debe ser una variable
 ```
 
-Hay que tener en cuenta el tipo de datos que estemos manejando. No es posible asignar un tipo de datos a una variable que solo acepte otra clase. Por ejemplo, no podemos asignar valores decimales a una variable tipo entero:
-
-```
-int x = 12.89;      //ERROR – La variable es tipo entero y se le está asignando un valor decimal
-
-float f = 12.89;    
-int y = f;          //ERROR – La variable es tipo entero y se le está asignando un valor decimal
-```
 
 ## Condicionales
 
@@ -144,7 +123,7 @@ Podemos realizar varios tipos de comparación y determinar cuando una condición
 
 ### Operadores Lógicos
 
-Los operadores lógicos se utilizan al combinar dos o mas expresiones relacionales y para invertir los valores lógicos. Los símbolos de los operadores lógicos corresponden a los conceptos de Y, O y NO.
+Los operadores lógicos se utilizan al combinar dos o mas expresiones de condición. Los símbolos de los operadores lógicos corresponden a los conceptos de Y, O y NO.
 
 | Operador | Significado |
 | :---: | :---: |
@@ -178,12 +157,10 @@ random(min, max);
 
 La función regresa un valor aleatorio decimal \( float \) desde el 0 hasta el parámetro alto. Otra forma de ingresar parámetros a la función es a través de dos parámetros en lugar de uno solo. El valor bajo será el primer valor del rango, y el valor alto será el último. Eso significa que si ingresamos el valor 3 primero, y luego el valor 5, nos devolverá un valor aleatorio decimal entre, por supuesto, 3 y 5. Además, acepta perfectamente valores negativos.
 
-El valor siempre será del tipo float . Si se deseara obtener un valor aleatorio pero entero \( int \), deberemos recurrir a la función int\(\) para convertirlo.
+El valor siempre será un numero decimal. 
 
 ```
-float f = random(5.2);       //Asigna a f un valor decimal entre 0 y 5.2
-int i = random(5.2);         //ERROR! No se puede asignar un valor aleatorio a una variable int
-int j = int(random(5.2));    //Asigna a j un valor entero entre 0 to 5
+let f = random(5.2);       //Asigna a f un valor decimal entre 0 y 5.2
 ```
 
-Ya que, como queda dicho, los valores que devuelve valores impredecibles, cada vez que el programa se ejecuta obtendremos diferentes resultados. Este número puede ser utilizado para controlar algún aspecto del programa.
+Es importante marcar que estos valores aleatorios son generados en el momento en el que el programa se ejecuta, por lo tanto cada vez que ejecutemos nuestro programa estos valores van a ser siempre diferentes.
