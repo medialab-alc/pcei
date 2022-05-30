@@ -4,7 +4,7 @@ Las estructuras repetitivas son encargadas de producir iteraciones. Es decir, a 
 Dentro de las posibilidades que tenemos al momento de usar una estructura de repeticion, nos encontramos con que podemos usar la estructura `while` o la estructura `for`.
 
 Teniendo este codigo que produce una serie de lineas verticales:  
-```Processing
+```javascript
 //Programa Original
 
 createCanvas(200, 200);
