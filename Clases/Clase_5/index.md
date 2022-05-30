@@ -24,7 +24,7 @@ line(140, 20, 140, 180);
 ```
 Se podria simplificar de la siguiente manera en un loop `while`:
 
-```Processing
+```javascript
 createCanvas(200, 200);
 let x = 0;
 while(x < 150) {
@@ -34,7 +34,7 @@ while(x < 150) {
 ```
 
 Y de la siguiente manera utilizando un ciclo `for`
-```Processing
+```javascript
 //Codigo utilizando un FOR
 
 createCanvas(200, 200);
@@ -72,7 +72,7 @@ Los paréntesis asociados a esta estructura corresponden a tres acciones interna
 
 ### Ejemplos de Uso:
 
-```
+```javascript
 // El iniciador es"int i = 20", la condición es"i < 80",
 // y la actualización es "i += 5". Cabe notar que el punto-y-coma termina los dos primeros elementos
 
@@ -85,7 +85,7 @@ for (let i = 20; i < 80; i += 5) {
 ![](https://raw.githubusercontent.com/0000marcosg/CVyP/master/assets/5import.png)
 
 
-```
+```javascript
 for (let x = -16; x < 100; x += 10) {
     line(x, 0, x+15, 50);
 }
@@ -99,7 +99,7 @@ for (let x = -8; x < 100; x += 10) {
 
 ![](https://raw.githubusercontent.com/0000marcosg/CVyP/master/assets/6import.png)
 
-```
+```javascript
 noFill();
 for (let d = 150; d > 0; d -= 10) {
     ellipse(50, 50, d, d);
@@ -108,7 +108,7 @@ for (let d = 150; d > 0; d -= 10) {
 
 ![](https://raw.githubusercontent.com/0000marcosg/CVyP/master/assets/7import.png)
 
-```
+```javascript
 for (let i = 0; i < 100; i += 2) {
     stroke(255-i);
     line(i, 0, i, 200);
@@ -121,7 +121,7 @@ for (let i = 0; i < 100; i += 2) {
 
 La estructura `FOR` produce repeticiones en una dimensión. Anidando iteraciones podemos crear efectos sumamente interesantes. Por ejemplo, teniendo tan solo dos coordenadas de puntos, si los anidamos en una estructura `FOR` , podemos cambiar una simple dimensión a una figura de dos dimensiones.
 
-```
+```javascript
 for (let y = 10; y < 100; y += 10) {
     point(10, y);
 }
@@ -129,7 +129,7 @@ for (let y = 10; y < 100; y += 10) {
 
 ![](https://raw.githubusercontent.com/0000marcosg/CVyP/master/assets/9import.png)
 
-```
+```javascript
 for (let x = 10; x < 100; x += 10) {
     point(x, 10);
 }
@@ -137,7 +137,7 @@ for (let x = 10; x < 100; x += 10) {
 
 ![](https://raw.githubusercontent.com/0000marcosg/CVyP/master/assets/10import.png)
 
-```
+```javascript
 for (let y = 10; y < 100; y += 10) {
     for (let x = 10; x < 100; x += 10) {
         point(x, y);
@@ -149,7 +149,7 @@ for (let y = 10; y < 100; y += 10) {
 
 La técnica es muy útil para crear fondos, texturas y patrones. Los números producidos por las variables de control de repeticiones pueden aplicarse a la posición, al color, al tamaño, a la transparencia o a cualquier otra cosa de atributo visual.
 
-```
+```javascript
 fill(0, 76);
 noStroke();
 for (let y = -10; y <= 100; y += 10) {
@@ -161,7 +161,7 @@ for (let y = -10; y <= 100; y += 10) {
 
 ![](https://raw.githubusercontent.com/0000marcosg/CVyP/master/assets/12import.png)
 
-```
+```javascript
 for (let y = 1; y < 100; y += 10) {
     for (let x = 1; x < y; x += 10) {
         line(x, y, x+6, y+6);
