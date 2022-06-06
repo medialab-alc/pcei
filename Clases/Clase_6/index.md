@@ -2,11 +2,11 @@
 
 Las funciones nos permite separar el codigo en partes, volviendolo modular y reusable sin tener que repetirlo. Vuelve nuestro codigo mas facil de leer y ajustar.
 
-Todo el tiempo estamos haciendo uso de funciones, por ejemplo cada vez que llamamos la funcion line\(\), rect\(\), ellipse\(\)  estamos haciendo uso de una fraccion de codigo escrita por los desarrolladores de Processing. Sin embargo, la creacion de funciones de usuario requiere varias elementos a tener en cuenta.
+Todo el tiempo estamos haciendo uso de funciones, por ejemplo cada vez que llamamos la funcion line\(\), rect\(\), ellipse\(\)  estamos haciendo uso de una fraccion de codigo escrita por los desarrolladores de p5.js. Sin embargo, la creacion de funciones de usuario requiere varias elementos a tener en cuenta.
 
 Los puntos importantes sobre porque deberiamos escribir nuestras propias funciones:
 
-* Modularidad - Las funciones parten un codigo largo en varias partes peque;as, haciendolo mas entendible y manejable. Por ejemplo, una vez que desarrollamos la manera de dibujar cierto elemento, podemos redibujarlo todas las veces que queramos sin preocuparnos de sus caracteristicas.
+* Modularidad - Las funciones parten un codigo largo en varias partes pequeñas, haciendolo mas entendible y manejable. Por ejemplo, una vez que desarrollamos la manera de dibujar cierto elemento, podemos redibujarlo todas las veces que queramos sin preocuparnos de sus caracteristicas.
 
 * Reusabilidad - Las funciones nos permiten reusar una parte del codigo sin tener que escribirlo de nuevo, podemos llamarlo cuantas veces sea necesario.
 
@@ -14,14 +14,14 @@ Los puntos importantes sobre porque deberiamos escribir nuestras propias funcion
 
 Una definicion de funcion consta de tres partes:
 
-* Return Type
+* Definicion
 * Nombre de la funcion
 * Argumentos
 
 Y su sintaxis es la siguiente:
 
-```Processing
-returnType NombreFuncion(argumentos){
+```javascript
+Definicion NombreFuncion(argumentos){
 
 //Codigo a ejecutar
 
@@ -30,8 +30,8 @@ returnType NombreFuncion(argumentos){
 
 Teniendo en cuenta esta sintaxis podemos describir el siguiente ejemplo:
 
-```
-void circuloRojo() {
+```javascript
+function circuloRojo() {
     fill(255, 0, 0);
     ellipse(50,50,20,20);
 }
@@ -41,8 +41,8 @@ Esta funcion cuyo nombre es "circuloRojo" ejecuta esas dos simples lineas de cod
 
 Para llamarla, la ejecutamos de la siguiente manera, por ejemplo detro de `draw()`:
 
-```
-void draw() {
+```javascript
+function draw() {
     background(255);
     circuloRojo();
 }
@@ -52,17 +52,17 @@ void draw() {
 
 Utilicemos el ejemplo de una pelota que rebota en los bordes de la pantalla como un codigo a separar en partes y ver sus posibilidades modulares:
 
-```
+```javascript
 // Variables Globales
-int x = 0;
-int vel = 1;
+let x = 0;
+let vel = 1;
 
-void setup() {
+function setup() {
     size(200,200);
     smooth();
 }
 
-void draw() {
+function draw() {
     background(255);
 
     // Movimiento
@@ -82,37 +82,37 @@ void draw() {
 
 Una vez que identificamos los elementos que componen nuestro codigo, podemos separarlo en partes y ponerlos en funciones, que luego van a ser llamadas de manera repetida dentro de `draw()`
 
-```
+```javascript
 posibilidades modulares:
 // Variables Globales
-int x = 0;
-int vel = 1;
+let x = 0;
+let vel = 1;
 
-void setup() {
+function setup() {
     size(200,200);
     smooth();
 }
 
-void draw() {
+function draw() {
     background(255);
     mover();
     rebotar();
     mostrar();
 }
 
-void mover() {
+function mover() {
     // Movimiento
     x = x + vel;
 }
 
-void rebotar() {
+function rebotar() {
     // Rebote de la pelota
     if ((x > width) || (x < 0)) {
         vel = vel * –1;
     }
 }
 
-void mostrar() {
+function mostrar() {
     // Mostrar la pelota
     stroke(0);
     fill(175);
@@ -126,8 +126,8 @@ De esta manera nuestro loop principal se transformo en una simple lista de funci
 
 Por ejemplo, podemos cambiar simplemente el contenido de la funcion `mostrar()` y su funcionamiento seguira siendo el mismo.
 
-```
-void mostrar() {
+```javascript
+function mostrar() {
   rectMode(CENTER);
   noFill();
   stroke(0);
@@ -141,8 +141,8 @@ void mostrar() {
 
 Un gran beneficio del uso de funciones es la posibilidad que nos ofrece a la hora de buscar errores en nuestro programa, pudiendo activar o desactivar elementos de nuestro programa:
 
-```
-void draw() {
+```javascript
+function draw() {
     background(255);
     //mover();
     //rebotar();
@@ -156,8 +156,8 @@ Los argumentos son valores que le pasamos a la funcion, son parametros en los cu
 
 Tomemos como ejemplo la funcion circuloRojo y agregemos un argumento.
 
-```
-void circuloRojo(int diametro) {
+```javascript
+function circuloRojo(let diametro) {
     fill(255, 0, 0);
     ellipse(50,50, diametro, diametro);
 }
@@ -165,32 +165,32 @@ void circuloRojo(int diametro) {
 
 Cuando declaramos una funcion y le agregamos un argumentos, lo que estamos haciendo es crear una variable local que solo puede ser usada dentro de esa funcion.
 
-Cuando llamemos en el draw esta funcion, el valor que agreguemos sera asignado a la variable diametro y el circulo se dibujara al tama;o establecido.
+Cuando llamemos en el draw esta funcion, el valor que agreguemos sera asignado a la variable diametro y el circulo se dibujara al tamaño establecido.
 
-```
+```javascript
 circuloRojo(20) //El circulo toma un diametro de 20 pixeles
 circuloRojo(80) //El circulo toma un diametro de 80 pixeles
 ```
 
 De la misma manera, si usamos el ejemplo de la funcion mover\(\) de la pelota que rebota, podemos agregar un argumento para la velocidad:
 
-```
-void mover(int factorVel) {
+```javascript
+function mover(let factorVel) {
     x = x + (vel * factorVel);
 }
 ```
 
 De esta manera multiplicamos la velocidad de movimiento de la pelota:
 
-```
+```javascript
 mover(2) //Se mueve dos veces mas rapido
 mover(5) //se mueve cinco veces mas rapido
 ```
 
 La cantidad de argumentos y los tipos de los mismos no tienen un limite, por ejemplo:
 
-```
-void mostrar(int x, int y, color c) {
+```javascript
+function mostrar(let x, let y, color c) {
   rectMode(CENTER);
   noFill();
   stroke(0);
@@ -204,8 +204,8 @@ void mostrar(int x, int y, color c) {
 
 Variando la cantidad de argumentos y haciendo un correcto uso de ellos se puede reutilizar la funcion con diferencias entre si, por ejemplo:
 
-```
-void draw() {
+```javascript
+function draw() {
   mostrar(50, 100, color(255, 0, 0));
   mostrar(100, 70, color(0, 0, 200));
 }
@@ -213,35 +213,9 @@ void draw() {
 
 Los argumentos de una funcion pueden ser pasados a la misma, tanto de manera literal con su valores o variables, asi como resultados de expresiones matematicas:
 
-```
-void draw() {
+```javascript
+function draw() {
   mostrar(100/2, 50 + 50, color(255, 0, 0));
 }
 ```
 
-# Return Type
-
-Hasta ahora todos los ejemplos de funciones que hemos creado tienen como `return type` la palabra `void`, esto indica, sin mas, que la funcion no devuelve ningun valor o dato. Una funcion void o una funcion vacia, simplemente ejecuta las lineas en su interior pero no devuelve ningun resultado de sus calculos.
-
-Un ejemplo de una funcion que retorne un valor seria por ejemplo, si quiseramos crear una funcion que realizara un calculo matematico, por ejemplo una suma.
-
-Definiriamos la funcion de la siguiente manera:
-
-```
-int suma(int valor1, int valor2) {
-
-    int total = valor1 + valor2
-    return total;
-
-}
-```
-
-Esta simple funcion realiza una suma entre sus dos argumentos, almacena el resultado en una variable llamada total y la devuelve mediante una accion return.
-
-Para ver esta suma en la funcion `draw()` por ejemplo, veriamos lo siguiente:
-
-```
-int totalSuma = suma(10, 5);
-```
-
-La variable entera `totalSuma` sera asignada con el valor que retorne de la funcion `suma()`, en este caso 10 + 5.
