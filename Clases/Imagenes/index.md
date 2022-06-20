@@ -42,7 +42,8 @@ function draw() {
 De la misma forma que cargamos una imagen externa a nuestro canvas, podemos hacer una simple modificacion al programa para capturar en su lugar la entrada de video de la camara de nuestro dispositivo.
 La funcion `createCapture()` crea un elemento de captura HTML, que puede capturar tanto el VIDEO como el AUDIO a traves del microfono. La sintaxis es la siguiente:
 
-```javascriptlet cam;
+```javascript  
+let cam;
 
 function setup() {
   createCanvas(400, 400);
