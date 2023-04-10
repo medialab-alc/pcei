@@ -32,4 +32,8 @@ Características de un algoritmo:
 [Frieder Nake](https://proyectoidis.org/frieder-nake/)  
 [Aaron Koblin](https://proyectoidis.org/aaron-koblin/)  
 [Casey Reas](http://reas.com/)  
+[Vera van de Seyp](https://veravandeseyp.com/)  
+[Maya Man](https://mayaontheinter.net/)  
+[Flor de Fuego]([http://reas.com/](https://flordefuego.github.io/obra.html))
+
 > [Sol LeWitt](https://billmill.org/images/sol/lewitt_49_instructions.jpg)
