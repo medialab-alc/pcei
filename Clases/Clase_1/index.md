@@ -34,6 +34,6 @@ Características de un algoritmo:
 [Casey Reas](http://reas.com/)  
 [Vera van de Seyp](https://veravandeseyp.com/)  
 [Maya Man](https://mayaontheinter.net/)  
-[Flor de Fuego]([http://reas.com/](https://flordefuego.github.io/obra.html))
+[Flor de Fuego](https://flordefuego.github.io/obra.html)
 
 > [Sol LeWitt](https://billmill.org/images/sol/lewitt_49_instructions.jpg)
