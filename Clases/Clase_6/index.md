@@ -157,7 +157,7 @@ Los argumentos son valores que le pasamos a la funcion, son parametros en los cu
 Tomemos como ejemplo la funcion circuloRojo y agregemos un argumento.
 
 ```javascript
-function circuloRojo(let diametro) {
+function circuloRojo(diametro) {
     fill(255, 0, 0);
     ellipse(50,50, diametro, diametro);
 }
@@ -175,7 +175,7 @@ circuloRojo(80) //El circulo toma un diametro de 80 pixeles
 De la misma manera, si usamos el ejemplo de la funcion mover\(\) de la pelota que rebota, podemos agregar un argumento para la velocidad:
 
 ```javascript
-function mover(let factorVel) {
+function mover(factorVel) {
     x = x + (vel * factorVel);
 }
 ```
@@ -190,7 +190,7 @@ mover(5) //se mueve cinco veces mas rapido
 La cantidad de argumentos y los tipos de los mismos no tienen un limite, por ejemplo:
 
 ```javascript
-function mostrar(let x, let y, color c) {
+function mostrar(x, y, c) {
   rectMode(CENTER);
   noFill();
   stroke(0);
