@@ -64,3 +64,6 @@ function setup() {
 ```
 De esta manera, la imagen solo se mostrara en el canvas.
 
+
+### filter()
+Como complemento, se puede usar la funcion `filter()` para aplicar un filtro visual al canvas. [Referencia: filter()](https://p5js.org/es/reference/#/p5/filter)  
