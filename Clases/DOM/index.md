@@ -53,6 +53,4 @@ h5.position(0, 0);
 ### Referencia completa a los elementos DOM
 [Referencia: DOM](https://p5js.org/es/reference/#group-DOM)
 
-### Github Pages - Hosting para nuestro sketch
-[Video de referencia, hasta el minuto 9](https://youtu.be/ZneWjyn18e8)
 
